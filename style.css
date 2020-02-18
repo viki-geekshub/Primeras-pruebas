@@ -1,0 +1,116 @@
+*{ /* Con esto anulamos cualquier margen o padding que tengan por defecto los elementos del html en toda la página, como la cita por ejemplo, y le ponemos un margen de 5 px a toda la pagina*/
+    margin: 5px;
+    padding: 0;
+}
+
+body{
+    background-color: gray;
+}
+
+h1{
+    background-color: blue;
+    color: white;
+}
+
+ul{
+    list-style: none;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+ol>li a{  /* Aqui estamos seleccionando los hijos directos del "ol" diciendole ">" */
+    color:red;
+}
+
+nav ul li:last-child a{  
+    color: yellow;
+}
+
+nav ul li:nth-child(2) a{  
+    color: green;   
+}
+
+ol li:nth-child(odd) a{  
+    color: pink;
+}
+
+#first{
+    color:red; /* PASO 1 - El parrafo sería rojo porque un id tiene mas peso que simplemente poniendolo a la "p"*/
+}
+
+#second{
+    color: blue;
+    /* OTRAS FORMAS DE PONER EL COLOR: 
+    color: rgb(255, 255, 255);
+    color: rgba(0, 0, 0, 0.5); --> aqui añadimos la cantidad de transparencia: 0 es totalmente transparente, 1 es totalmente opaco
+    color: #ffffff;
+    */
+}
+
+#third{
+    color: green;
+    text-shadow: -10px -2px 3px red; /* para llevar la sombra hacia arriba a la izquierda usamos numeros negativos */
+    box-shadow: 10px -2px 3px red inset; /* el comando inset hace que la sombra vaya hacia dentro del elemento */
+}
+
+p{
+    margin: 10px;
+    /* PARA CONCRETAR MAS EL MARGIN SE PUEDE APLICAR ASÍ:
+    margin-top: "10px";
+    margin-bottom: "10px";
+    margin-left: "10px";
+    margin-right: "10px";
+    */
+    border: 1px solid black;
+    padding: 20px;
+    color: yellow !important; /* PASO 2 - Pero al ponerle el important, volvemos a darle prioridad a este color y anulamos el del id*/
+}   
+
+[border="2"]{  /* Con este selector estamos seleccionando por el atributo */
+    background-color: orange;
+}
+
+#mi_texto{
+    text-decoration: line-through underline overline;
+    color: black;
+}
+
+/* La prioridad será siempre así: !important / id / clase / etiqueta / orden natural en el código   --> cuanto mas específico mayor prioridad también */
+
+/*
+
+p .class --> 
+p.class --> 
+p>.class --> Los hijos directos 
+nav ul li:last-child -->  el ultimo hijo
+nav ul li:nth-child(2) --> un hijo especifico
+nav ul li:nth-child(odd) --> todos los hijos impares
+nav ul li:nth-child(even) --> todos los hijos pares
+
+Cuando tenemos varias reglas CSS en cascada que afectan a un mismo elemento, el orden de prioridad que determina como se mostrará el elemento es el siguiente:
+
+1º !important: un estilo marcado como importante prevalecerá sobre el resto de estilos. En caso de tener varios estilos marcados con !important, prevalecerá el de mayor peso según las reglas que estamos explicando.
+
+2º Origen de las reglas: las reglas del autor de la web prevalecerán sobre las reglas del lector de similar peso. Y tanto las reglas de autor como de lector prevalecerán sobre las del navegador.
+
+3º Peso de la regla: una regla con mayor peso prevalecerá sobre otra de menor peso.
+Peso = ABC (número de 3 cifras, cada una de las cuales se calcula contando los selectores de cada tipo según se indica a continuación)
+A = nº de selectores de ID (selectores que acceden al atributo «id» del elemento mediante «#»)
+B = nº de selectores de CLASE (selectores que acceden al atributo «class» del elemento mediante «.»)
+C = nº de selectores de HTML (selectores que acceden al tag html)
+Ejemplos ordenados de más a menos peso:
+#id1 .clase1 a (A=1, B=1, C=1 –> peso = 111)
+div#id1 a (A=1, B=0, C=2 –> peso = 102)
+.clase1 li.clase2 a (A=0, B=2, C=2 –> peso = 22)
+.clase1 (A=0, B=1, C=0 –> peso = 10)
+div a (A=0, B=0, C=2 –> peso = 2)
+
+4º Orden de especificación: cuando dos reglas tienen el mismo peso prevalecerá la última regla especificada.
+
+NOTA:
+Y por último un detalle a tener en cuenta a la hora de diseñar correos HTML. Los gestores de correo como GMail suelen desactivar los estilos CSS para que no interfieran con sus propios estilos, con lo que solo se respetan los estilos definidos en línea en el código HTML mediante el atributo style, como por ejemplo:
+
+<span style="color:#ff0000;">texto</span>
+*/

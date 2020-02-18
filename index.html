@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi primera pagina web</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <header>
+        <h1>Mi página</h1>
+        <img src="imagenes/arbol.jpg" alt="Foto de un árbol" width="300px" />
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Skill Soft</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <ol>
+        <li><a href="#">Sofía</a></li>
+        <li><a href="#">Juan</a></li>
+        <li><a href="#">Pepa</a></li>
+        <li><a href="#">Rodrigo</a></li>
+    </ol>
+    
+    <section>
+        <article>
+            <p id="first"><i>Lorem ipsum dolor sit amet</i>, <strong>consectetur adipisicing elit</strong>. Quibusdam a laudantium
+                omnis enim! Molestiae
+                explicabo numquam animi maxime architecto veniam optio, autem quos amet harum ad id exercitationem
+                voluptates neque voluptatibus quis aspernatur est ipsa eos non nihil nesciunt laborum atque. Eius
+                corporis laudantium quisquam possimus voluptatem iure aliquam, eos beatae, veniam doloribus et fugiat
+                cum, <span id="mi_texto">necessitatibus ea itaque</span>.</p>
+            <p id="second"><i>Lorem ipsum dolor sit amet</i>, <strong>consectetur adipisicing elit</strong>. Quibusdam a laudantium
+                omnis enim! Molestiae
+                explicabo numquam animi maxime architecto veniam optio, autem quos amet harum ad id exercitationem
+                voluptates neque voluptatibus quis aspernatur est ipsa eos non nihil nesciunt laborum atque. Eius
+                corporis laudantium quisquam possimus voluptatem iure aliquam, eos beatae, veniam doloribus et fugiat
+                cum, necessitatibus ea itaque.</p>
+            <p id="third"><i>Lorem ipsum dolor sit amet</i>, <strong>consectetur adipisicing elit</strong>. Quibusdam a laudantium
+                omnis enim! Molestiae
+                explicabo numquam animi maxime architecto veniam optio, autem quos amet harum ad id exercitationem
+                voluptates neque voluptatibus quis aspernatur est ipsa eos non nihil nesciunt laborum atque. Eius
+                corporis laudantium quisquam possimus voluptatem iure aliquam, eos beatae, veniam doloribus et fugiat
+                cum, necessitatibus ea itaque.</p>
+        </article>
+    </section>
+    <aside>
+
+        <blockquote>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, qui?</blockquote>
+        <q>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi, qui?</q>
+        <cite>Pepito el de los palotes</cite>
+
+    </aside>
+    <table border="2">
+        <tr>
+            <th>encabezado 1</th>
+            <th>encabezado 2</th>
+            <th>encabezado 3</th>
+        </tr>
+        <tr>
+            <td>campo 1</td>
+            <td>campo 2</td>
+            <td>campo 3</td>
+        </tr>
+        <tr>
+            <td>campo 1</td>
+            <td>campo 2</td>
+            <td>campo 3</td>
+        </tr>
+    </table>
+    <br>
+    <form action="" method="post" target="_blank" id="formulario" accept-charset="UTF-8">
+        <fieldset>
+            <legend>Datos personales</legend>
+
+            <label for="name">Nombre:</label>
+            <input type="text" name="name" placeholder="Nombre" minlength="5" maxlength="10" autofocus="autofocus"
+                size="40" tabindex="2" required="required">
+            <br>
+            <label for="password">Contraseña:</label>
+            <input type="password" name="password" placeholder="Contraseña" required>
+            <br>
+            <label for="fechanac">Fecha de Nacimiento:</label>
+            <input name="fechanac" type="date">
+            <br>
+            <label for="number">Numero de registro:</label>
+            <input type="number" name="number" placeholder="Numero de registro">
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" name="email" placeholder="Email">
+            <br>
+            <label for="pais">País:</label>
+            <select name="pais" id="pais">
+                <option value="España" selected="selected">España</option>
+                <option value="Italia">Italia</option>
+                <option value="Estados Unidos">EEUU</option>
+            </select>
+            <br><br>
+            <label for="gender">Genero:</label>
+            <br>
+            <input type="radio" name="gender" value="male"><label>Hombre</label>
+            <br>
+            <input type="radio" name="gender" value="female"><label>Mujer</label>
+            <br>
+            <input type="radio" name="gender" value="other"><label for="other">Otro</label>
+            <br>
+            <br>
+            <label>Vehículos que tienes:</label>
+            <br>
+            <input type="checkbox" name="vehiculos" value="Moto">
+            <label for="vehiculos">Moto</label>
+            <br>
+            <input type="checkbox" name="vehiculos" value="Coche">
+            <label for="vehiculos">Coche</label>
+            <br>
+            <input type="checkbox" name="vehiculos" value="Camion">
+            <label for="vehiculos">Camión</label>
+            <br><br>
+            <textarea name="description" cols="30" rows="10" placeholder="Descripción">
+        </textarea>
+            <br>
+            <label>Foto reciente: </label>
+            <input name="foto" type="file">
+            <br>
+            <label>Color del fondo:</label>
+            <input name="color" type="color">
+            <br>
+            <input type="submit" value="Pulsame">
+            <input type="reset" value="Borrar Formulario">
+            <button>Botón inutil</button>
+        </fieldset>
+    </form>
+    <footer>
+        <p>Mi pie de página &copy;</p>
+    </footer>
+</body>
+
+</html>
